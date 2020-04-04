@@ -12,6 +12,6 @@
     "minimum-stability": "dev",
     "require": {},
     "scripts": {
-	    "serve": "sudo php -S localhost:80"
+	    "serve": "php -S localhost:8000"
     }
 }
