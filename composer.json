@@ -1,0 +1,17 @@
+{
+    "name": "zyddv/ksuind",
+    "description": "Kamus Sunda Indonesia",
+    "type": "project",
+    "license": "GNU/GPL",
+    "authors": [
+        {
+            "name": "zaidhdev",
+            "email": "zaid.harisah.zh9@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "scripts": {
+	    "serve": "sudo php -S localhost:80"
+    }
+}
