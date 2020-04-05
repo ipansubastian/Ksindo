@@ -1,0 +1,53 @@
+@import url('bootstrap.min.css');
+
+@keyframes anime{
+    0% {
+        padding-left: .7rem;
+        padding-right: 1.3rem;
+    }
+    20% {
+        padding-left: .9rem;
+        padding-right: 1.1rem;
+        right: -.5px;
+    }
+    40% {
+        padding-left: 1.1rem;
+        padding-right: .9rem;
+        right: -1px;
+    }
+    60% {
+        padding-left: 1.3rem;
+        padding-right: .7rem;
+        right: -1.5px;
+
+    }
+    80% {
+        padding-left: 1.5rem;
+        padding-right: .5rem;
+        right: -2px;
+
+    }
+    100% {
+        padding-left: 1.7rem;
+        padding-right: .3rem;
+        right: -2.5px;
+
+    }
+}
+
+a.nav-item.nav-link{
+    padding-left: .7rem;
+    padding-right: 1.3rem;
+}
+
+a.nav-item.nav-link.active {
+    position: relative;
+    display: inline-block;
+    animation-name: anime;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    }
