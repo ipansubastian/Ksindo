@@ -22,6 +22,7 @@ class App
 
         $tmp_controller = ucfirst($url[0]);
 
+
         if (file_exists("../app/controllers/{$tmp_controller}.php")) {
             $this->controller = $tmp_controller;
             unset($url[0]);
@@ -61,7 +62,7 @@ class App
     public function parseURL()
     {
         if (isset($_GET['url'])) {
-            $url = trim('/', $_GET['url']);
+            $url = trim( $_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
             return $url;

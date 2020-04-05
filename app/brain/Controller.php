@@ -6,6 +6,8 @@ class Controller
     public function view($view, $data = [])
     {
         require_once "../app/views/{$view}.h.php";
+
+        // Tambahkan newline di akhir baris agar view berikutnya tampil di bawah
         echo "\n";
     }
 
