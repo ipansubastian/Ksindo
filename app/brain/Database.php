@@ -18,7 +18,7 @@ class Database
     // Memulai koneksi ke database
     public function __construct()
     {
-        $dsn = "mysql:db_host={$this->db_host};db_name={$this->db_name}";
+        $dsn = "mysql:host={$this->db_host};dbname={$this->db_name}";
         $additi_param = [
             PDO::ATTR_PERSISTENT => True,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
@@ -65,17 +65,19 @@ class Database
     }
 
     // Ambil semua hasil eksekusi query
-    public function fetchAll()
+    public function fetchAll($result_type = PDO::FETCH_ASSOC)
     {
+
         $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $this->stmt->fetchAll($result_type);
     }
 
     // Ambil satu baris eksekusi query
-    public function fetchOne()
+    public function fetchOne($result_type = PDO::FETCH_ASSOC)
     {
         $this->execute();
-        return $this->stmt->fetch(PDO::FETCH_ASSOC);
+        return $this->stmt->fetch($result_type);
     }
 
     // Jumlah baris terpengaruh
