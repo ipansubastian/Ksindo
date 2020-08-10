@@ -1,0 +1,2 @@
+# Ksindo
+Kamus Sunda Indonesia
